@@ -44,6 +44,15 @@ function createContainerBackground(hexColor) {
     colorsContainerEl.appendChild(colorEl)
 }
 
+function firstInterface() {
+    fetch(`https://www.thecolorapi.com/scheme?hex=000000&mode=monochrome&format=json&count=5`)
+        .then(response => response.json())
+        .then(data => {
+            renderHexCodes(data.colors)
+    })
+}
+firstInterface()
+
 
 
 
