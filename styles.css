@@ -1,0 +1,69 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.color-form {
+    padding: 1em 1em 2em;
+    display: grid;
+    grid-template-columns: auto minmax(max-content,1fr) minmax(max-content, 15vw);
+    grid-template-areas: 
+    "seedColor dropdown button";
+    grid-gap: 1em;
+}
+
+.color-form > * {
+    height: 100%;
+}
+
+.seed-color {
+    grid-area: seedColor;
+}
+
+.dropdown {
+    border: 1px solid darkgrey;
+    border-radius: 0.35em;
+    grid-area: dropdown;
+}
+
+.submit-btn {
+    padding: 1em 0.85em;
+    background-color: white;
+    border: 1px solid darkgrey;
+    border-radius: 0.35em;
+    cursor: pointer;
+    grid-area: button;
+}
+
+.submit-btn:active {
+    transform: scale(0.95);
+}
+
+/*============
+COLORS CONTAINER
+==============*/
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.colors-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 78vh;
+}
+
+.colors-container > div {
+    min-height: 100%;
+    width: 100%;
+}
+.hex-colors {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+}
